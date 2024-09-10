@@ -4,15 +4,90 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    nav {
+
+    /* NAVIGATION BAR */
+
+    .nav {
         display: flex;
+        justify-content: space-between;
     }
 
-    nav img {
-        width: 5%;
+    .menu-container {
+        position: relative;
+        display: inline-block;
     }
 
-    nav ul li {
-        display: flex;
+    /* Nel contesto di un menu a discesa, l'uso della proprietà position: relative per il contenitore .menu-container è importante per garantire che il menu a discesa sia posizionato correttamente rispetto al suo genitore. Ecco perché:
+
+Motivazioni per position: relative
+Riferimento per il Posizionamento Assoluto:
+
+Quando il menu a discesa (.dropdown-menu) è posizionato con position: absolute, viene posizionato rispetto al suo primo antenato con una posizione diversa da static. Usando position: relative sul .menu-container, stabiliamo questo elemento come riferimento per il posizionamento assoluto del menu a discesa.
+Senza position: relative su .menu-container, il menu a discesa potrebbe essere posizionato rispetto all'intero documento o a un altro elemento non desiderato, portando a comportamenti imprevisti.
+Controllo del Posizionamento:
+
+L'uso di position: relative consente di controllare esattamente dove apparirà il menu a discesa rispetto al contenitore .menu-container. In questo caso, il menu a discesa è posizionato assolutamente con top: 100% e left: 0, il che significa che apparirà direttamente sotto il pulsante.
+Gestione dello Spazio:
+
+position: relative non influisce sul flusso normale del documento, quindi il contenitore mantiene il suo spazio nel layout, e solo il posizionamento del menu a discesa viene influenzato. Questo evita che il layout generale della pagina venga alterato dal menu a discesa. */
+
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
+
+    /* In questo modo, .dropdown-menu verrà visualizzato esattamente sotto il .menu-button, e la sua posizione sarà controllata rispetto a .menu-container. Se non utilizzassi position: relative su .menu-container, il menu a discesa potrebbe finire in una posizione imprevista, fuori dal contesto del pulsante. */
+
+    .dropdown-menu a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Mostra il menu a discesa quando si passa sopra il contenitore */
+    .menu-container:hover .dropdown-menu {
+        display: block;
+    }
+
+
+
+
+
+    /* CSS */
+    .container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        /* Imposta l'altezza desiderata */
+        background-image: url(./foto-pictures/IMG_8069.heic);
+        background-size: cover;
+        /* Adatta l'immagine alle dimensioni dell'elemento */
+        background-position: center;
+        /* Centra l'immagine */
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: rgba(175, 173, 173, 0.5);
+        /* Colore nero con opacità 0.5 */
+    }
+
+
 }
