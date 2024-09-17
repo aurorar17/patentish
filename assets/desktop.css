@@ -13,7 +13,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2%;
+        padding: 0 2%;
     }
 
     .nav-container {
@@ -22,7 +22,6 @@
     }
 
     .nav-container a {
-        margin-right: 20px;
         color: black;
         text-decoration: none;
     }
@@ -33,7 +32,27 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        font-size: 3.5em;
     }
+
+
+    #login-button {
+        display: inline-block;
+        /* Permette al bottone di comportarsi come un elemento inline con padding */
+        padding: 10px 20px;
+        /* Spazio interno del bottone */
+        font-size: 16px;
+        /* Dimensione del testo */
+        font-family: 'Arial', sans-serif;
+        /* Tipo di font */
+        color: #27ae60;
+        /* Colore del testo */
+        border: #27ae60 solid 1px;
+        /* Rimuove il bordo predefinito */
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+
 
     /* Nel contesto di un menu a discesa, l'uso della proprietà position: relative per il contenitore .menu-container è importante per garantire che il menu a discesa sia posizionato correttamente rispetto al suo genitore. Ecco perché:
 
@@ -54,12 +73,13 @@ position: relative non influisce sul flusso normale del documento, quindi il con
         display: inline-block;
     }
 
-    /* .dropdown-menu {
+    .dropdown-menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #f9f9f9;
+        margin-left: 10px;
+        background-color: #000000;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
@@ -67,7 +87,7 @@ position: relative non influisce sul flusso normale del documento, quindi il con
 
     .dropdown-menu a {
         color: black;
-        padding: 12px 16px;
+        padding: 30%;
         text-decoration: none;
         display: block;
     }
@@ -76,86 +96,10 @@ position: relative non influisce sul flusso normale del documento, quindi il con
         background-color: #f1f1f1;
     }
 
-    /* Mostra il menu a discesa quando si passa sopra il contenitore 
+    /* Mostra il menu a discesa quando si passa sopra il contenitore */
     .menu-container:hover .dropdown-menu {
         display: block;
-    } */
-
-    .dropdown-menu {
-        background-color: #ffffff;
-        /* Colore più chiaro per un look pulito */
-        border-radius: 8px;
-        /* Aggiungi angoli arrotondati */
-        min-width: 180px;
-        /* Leggermente più largo per dare spazio */
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-        /* Ombra più soft */
     }
-
-    .dropdown-menu a {
-        color: #333333;
-        /* Testo leggermente più scuro */
-        padding: 14px 20px;
-        /* Più spazio intorno agli elementi */
-        font-family: 'Arial', sans-serif;
-        /* Scegli un font moderno */
-        font-size: 14px;
-        /* Riduci leggermente la dimensione del testo */
-        font-weight: bold;
-        /* Rendi il testo più visibile */
-        transition: background-color 0.3s ease;
-        /* Aggiungi transizioni fluide */
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #ececec;
-        /* Colore hover più soft */
-    }
-
-    .dropdown-menu {
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        opacity: 0;
-        transform: translateY(-10px);
-        /* Inizialmente nascosto leggermente in alto */
-    }
-
-    .menu-container:hover .dropdown-menu {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-        /* Scende con una transizione fluida */
-    }
-
-    .dropdown-menu a {
-        letter-spacing: 0.5px;
-        /* Aumenta leggermente lo spazio tra le lettere */
-        line-height: 1.5;
-        /* Aggiungi altezza della linea per migliorare la leggibilità */
-    }
-
-    .dropdown-menu {
-        animation: slideIn 0.3s ease forwards;
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .dropdown-menu {
-        border: 1px solid #dddddd;
-        /* Bordo leggero e discreto */
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        /* Ombra più delicata */
-    }
-
 
     .button {
         display: inline-block;
@@ -218,18 +162,30 @@ position: relative non influisce sul flusso normale del documento, quindi il con
 
     /* TITOLO */
 
+    #title1 {
+        font-size: 0.5em;
+        font-weight: normal;
+    }
+
     .title-container {
         text-align: center;
     }
 
     h2 {
-        font-size: 3em;
-        font-weight: bold;
+        font-size: 4em;
+        font-weight: normal;
+        line-height: 130%;
     }
 
     h3 {
-        font-size: 2em;
+        font-size: 4em;
         font-weight: bold;
+
+    }
+
+    .italian {
+        background: linear-gradient(100deg, #228B22, #ffffff, #dd1d1d);
+        border-radius: 10px;
     }
 
     .special-effect {
@@ -238,6 +194,7 @@ position: relative non influisce sul flusso normale del documento, quindi il con
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        margin-bottom: 0;
     }
 
 
