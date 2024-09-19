@@ -1,24 +1,27 @@
 @media (min-width: 1025px) {
 
     body {
-        font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
+        font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
     }
 
+    /* HEADER */
 
     /* NAVIGATION BAR */
 
-
+    .header-background-picture {
+        background-image: url(/foto-pictures/sfondo.PNG);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        /* o qualsiasi altra altezza desiderata */
+    }
 
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2%;
-    }
-
-    .nav-container {
-        display: flex;
-        align-items: center;
+        padding: 0 10%;
     }
 
     .nav-container a {
@@ -27,7 +30,8 @@
     }
 
     h1 {
-        background: linear-gradient(135deg, #228B22, #27ae60, #2ecc71);
+        background: black;
+        /*linear-gradient(135deg, #228B22, #27ae60, #2ecc71); */
         font-weight: bold;
         -webkit-background-clip: text;
         background-clip: text;
@@ -35,129 +39,40 @@
         font-size: 3.5em;
     }
 
-
-    #login-button {
+    .button {
         display: inline-block;
-        /* Permette al bottone di comportarsi come un elemento inline con padding */
         padding: 10px 20px;
-        /* Spazio interno del bottone */
         font-size: 16px;
-        /* Dimensione del testo */
-        font-family: 'Arial', sans-serif;
-        /* Tipo di font */
-        color: #27ae60;
-        /* Colore del testo */
-        border: #27ae60 solid 1px;
-        /* Rimuove il bordo predefinito */
+        color: #ffffff;
+        background: linear-gradient(135deg, #2ecc71, #27ae60, #228B22);
+        border: #000000 solid 1px;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #white-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: #000000 solid 1px;
         border-radius: 5px;
         background-color: #ffffff;
     }
 
-
-    /* Nel contesto di un menu a discesa, l'uso della proprietà position: relative per il contenitore .menu-container è importante per garantire che il menu a discesa sia posizionato correttamente rispetto al suo genitore. Ecco perché:
-
-Motivazioni per position: relative
-Riferimento per il Posizionamento Assoluto:
-
-Quando il menu a discesa (.dropdown-menu) è posizionato con position: absolute, viene posizionato rispetto al suo primo antenato con una posizione diversa da static. Usando position: relative sul .menu-container, stabiliamo questo elemento come riferimento per il posizionamento assoluto del menu a discesa.
-Senza position: relative su .menu-container, il menu a discesa potrebbe essere posizionato rispetto all'intero documento o a un altro elemento non desiderato, portando a comportamenti imprevisti.
-Controllo del Posizionamento:
-
-L'uso di position: relative consente di controllare esattamente dove apparirà il menu a discesa rispetto al contenitore .menu-container. In questo caso, il menu a discesa è posizionato assolutamente con top: 100% e left: 0, il che significa che apparirà direttamente sotto il pulsante.
-Gestione dello Spazio:
-
-position: relative non influisce sul flusso normale del documento, quindi il contenitore mantiene il suo spazio nel layout, e solo il posizionamento del menu a discesa viene influenzato. Questo evita che il layout generale della pagina venga alterato dal menu a discesa. */
-
-    .menu-container {
-        position: relative;
+    #red-button {
         display: inline-block;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        margin-left: 10px;
-        background-color: #000000;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-
-    .dropdown-menu a {
-        color: black;
-        padding: 30%;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #f1f1f1;
-    }
-
-    /* Mostra il menu a discesa quando si passa sopra il contenitore */
-    .menu-container:hover .dropdown-menu {
-        display: block;
-    }
-
-    .button {
-        display: inline-block;
-        /* Permette al bottone di comportarsi come un elemento inline con padding */
         padding: 10px 20px;
-        /* Spazio interno del bottone */
         font-size: 16px;
-        /* Dimensione del testo */
-        font-family: 'Arial', sans-serif;
-        /* Tipo di font */
-        color: #ffffff;
-        /* Colore del testo */
-        background: linear-gradient(135deg, #2ecc71, #27ae60, #228B22);
-        /* Colore di sfondo del bottone */
-        border: none;
-        /* Rimuove il bordo predefinito */
+        color: #ffffff !important;
+        background: linear-gradient(135deg, #d75454, #d22727, #d40000);
+        border: #000000 solid 1px;
         border-radius: 5px;
-        /* Angoli arrotondati */
         text-align: center;
-        /* Allinea il testo al centro */
         text-decoration: none;
-        /* Rimuove la sottolineatura */
         cursor: pointer;
-        /* Cambia il cursore in una mano per indicare cliccabilità */
-        transition: background-color 0.3s, transform 0.2s;
-        /* Transizioni morbide per l'effetto hover */
     }
-
-    /* Effetto hover */
-    .button:hover {
-        background-color: #0056b3;
-        /* Colore di sfondo quando il mouse è sopra */
-        transform: translateY(-2px);
-        /* Effetto di sollevamento del bottone */
-    }
-
-    /* Effetto focus */
-    .button:focus {
-        outline: none;
-        /* Rimuove il contorno predefinito */
-        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
-        /* Aggiunge un'ombra blu quando il bottone è focalizzato */
-    }
-
-    /* Effetto attivo (quando il bottone è cliccato) */
-    .button:active {
-        background-color: #004085;
-        /* Colore di sfondo quando il bottone è cliccato */
-        transform: translateY(1px);
-        /* Effetto di pressione del bottone */
-    }
-
-
-
-
-
-
-
 
 
     /* TITOLO */
@@ -186,6 +101,7 @@ position: relative non influisce sul flusso normale del documento, quindi il con
     .italian {
         background: linear-gradient(100deg, #228B22, #ffffff, #dd1d1d);
         border-radius: 10px;
+        font-weight: bold;
     }
 
     .special-effect {
@@ -198,6 +114,47 @@ position: relative non influisce sul flusso normale del documento, quindi il con
     }
 
 
-    /* ARTICLE */
+    /* STUPID ARROW */
+
+    .down-arrow {
+        position: absolute;
+        top: calc(100vh - 60px);
+        left: calc(50% - 14px);
+        width: 0;
+        height: 30px;
+        border: 2px solid;
+        border-radius: 2px;
+        display: inline-block;
+        animation: jumpInfinite 1.5s infinite;
+    }
+
+    .down-arrow:after {
+        content: " ";
+        position: absolute;
+        top: 12px;
+        /* Posiziona la punta alla fine del corpo */
+        left: -10px;
+        /* Centra la freccia */
+        width: 16px;
+        height: 16px;
+        border-bottom: 4px solid;
+        border-right: 4px solid;
+        border-radius: 4px;
+        transform: rotateZ(45deg);
+    }
+
+    @keyframes jumpInfinite {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
 
 }
