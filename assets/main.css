@@ -1,0 +1,81 @@
+body {
+    font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
+}
+
+/* HEADER SECTION */
+
+
+/* title section */
+
+.title-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.title-background-picture {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url('/foto-pictures/1jan-baborak-4STq2B24S1k-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ANIMATED ARROW */
+
+.down-arrow {
+    position: absolute;
+    top: 100px;
+    bottom: 40px;
+    /* Posiziona la freccia 20px sopra il bordo inferiore della sezione */
+    left: 50%;
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    display: inline-block;
+    animation: jumpInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    /* Posiziona la punta alla fine del corpo */
+    left: -10px;
+    /* Centra la freccia */
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}

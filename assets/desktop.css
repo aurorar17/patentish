@@ -1,160 +1,52 @@
-@media (min-width: 1025px) {
+/* Media query per desktop (min larghezza: 1024px) */
+@media screen and (min-width: 1024px) {
 
-    body {
-        font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
-    }
+    /* HEADER SECTION */
 
-    /* HEADER */
+    /* navigation bar */
 
-    /* NAVIGATION BAR */
-
-    .header-background-picture {
-        background-image: url(/foto-pictures/sfondo.PNG);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        height: 100vh;
-        /* o qualsiasi altra altezza desiderata */
+    nav {
+        background-color: #f8f8f8;
+        padding: 10px 20px;
     }
 
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10%;
-    }
-
-    .nav-container a {
-        color: black;
-        text-decoration: none;
     }
 
     h1 {
-        background: black;
-        /*linear-gradient(135deg, #228B22, #27ae60, #2ecc71); */
-        font-weight: bold;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        font-size: 3.5em;
+        font-size: 1.8rem;
+        margin: 0;
     }
 
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #ffffff;
-        background: linear-gradient(135deg, #2ecc71, #27ae60, #228B22);
-        border: #000000 solid 1px;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
+    .nav-container {
+        display: flex;
+        gap: 10px;
     }
 
-    #white-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: #000000 solid 1px;
-        border-radius: 5px;
-        background-color: #ffffff;
+    /* title section */
+
+    .title-background-picture {
+        height: 80vh;
     }
 
-    #red-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #ffffff !important;
-        background: linear-gradient(135deg, #d75454, #d22727, #d40000);
-        border: #000000 solid 1px;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-
-    /* TITOLO */
-
-    #title1 {
-        font-size: 0.5em;
-        font-weight: normal;
-    }
-
-    .title-container {
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 4em;
-        font-weight: normal;
-        line-height: 130%;
-    }
-
-    h3 {
-        font-size: 4em;
-        font-weight: bold;
-
-    }
-
-    .italian {
-        background: linear-gradient(100deg, #228B22, #ffffff, #dd1d1d);
-        border-radius: 10px;
-        font-weight: bold;
-    }
-
-    .special-effect {
-        background: linear-gradient(135deg, #228B22, #27ae60, #2ecc71);
-        font-weight: bold;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        margin-bottom: 0;
-    }
-
-
-    /* STUPID ARROW */
-
-    .down-arrow {
+    #title-1 {
         position: absolute;
-        top: calc(100vh - 60px);
-        left: calc(50% - 14px);
-        width: 0;
-        height: 30px;
-        border: 2px solid;
-        border-radius: 2px;
-        display: inline-block;
-        animation: jumpInfinite 1.5s infinite;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
     }
 
-    .down-arrow:after {
-        content: " ";
+    #title-2 {
         position: absolute;
-        top: 12px;
-        /* Posiziona la punta alla fine del corpo */
-        left: -10px;
-        /* Centra la freccia */
-        width: 16px;
-        height: 16px;
-        border-bottom: 4px solid;
-        border-right: 4px solid;
-        border-radius: 4px;
-        transform: rotateZ(45deg);
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
     }
 
-    @keyframes jumpInfinite {
-        0% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(20px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
-    }
 
 }
