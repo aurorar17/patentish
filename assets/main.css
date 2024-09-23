@@ -4,6 +4,22 @@ body {
 
 /* HEADER SECTION */
 
+nav {
+    background-color: #2a2828;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.button {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 
 /* title section */
 
@@ -23,6 +39,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 
 .overlay {
@@ -38,7 +55,7 @@ body {
 
 .down-arrow {
     position: absolute;
-    top: 100px;
+    top: 470px;
     bottom: 40px;
     /* Posiziona la freccia 20px sopra il bordo inferiore della sezione */
     left: 50%;

@@ -32,7 +32,8 @@
                 <div class="overlay"></div>
             </div>
             <div id="title-1">
-                <h2>Struggling to get your Italian driver license?</h2>
+                <h2>Struggling to get your Italian driverS license?</h2>
+                <div class="down-arrow"></div>
             </div>
             <div id="title-2">
                 <h3>We'll help you!</h3>
@@ -44,6 +45,49 @@
 
 
     <main>
+        <form class="form-container" style="margin-top: 0px;">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" required>
+            </div>
+
+            <div>
+                <label for="npeople">People numbers:</label>
+                <input type="number" name="npeople" id="npeople" min="2" max="30" value="2" required>
+
+                <label for="phonen">Phone number:</label>
+                <input type="tel" name="phonen" id="phonen" required>
+            </div>
+
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Hour:</label>
+                <input type="time" id="time" required>
+            </div>
+
+            <div>
+                <label for="dogs">Check this box if you have dogs:</label>
+                <input type="checkbox" id="dogs" name="dogs">
+            </div>
+
+            <fieldset>
+                <legend>Check the boxes if you have kids:</legend>
+                <label><input type="checkbox" name="kids" value="1"> Kid 1</label>
+                <label><input type="checkbox" name="kids" value="2"> Kid 2</label>
+                <label><input type="checkbox" name="kids" value="3"> Kid 3</label>
+                <label><input type="checkbox" name="kids" value="4"> Kid 4</label>
+                <label><input type="checkbox" name="kids" value="5"> Kid 5</label>
+            </fieldset>
+
+            <div id="botton">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </main>
 
     <footer>

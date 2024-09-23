@@ -6,7 +6,6 @@
     /* navigation bar */
 
     nav {
-        background-color: #f8f8f8;
         padding: 10px 20px;
     }
 
@@ -17,7 +16,7 @@
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 3em;
         margin: 0;
     }
 
@@ -34,7 +33,7 @@
 
     #title-1 {
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
@@ -42,6 +41,7 @@
 
     #title-2 {
         position: absolute;
+        display: none;
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);

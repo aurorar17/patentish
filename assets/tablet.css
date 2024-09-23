@@ -6,7 +6,6 @@
     /* navigation bar */
 
     nav {
-        background-color: #f8f8f8;
         padding: 10px 20px;
     }
 
@@ -17,7 +16,7 @@
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 3em;
         margin: 0;
     }
 
@@ -34,18 +33,36 @@
 
     #title-1 {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        font-size: 3em;
     }
 
     #title-2 {
+        display: none;
         position: absolute;
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
+    }
+
+    /* ANIMATED ARROW */
+
+    .down-arrow {
+        position: absolute;
+        top: 350px;
+        bottom: 40px;
+        /* Posiziona la freccia 20px sopra il bordo inferiore della sezione */
+        left: 50%;
+        width: 0;
+        height: 30px;
+        border: 2px solid;
+        border-radius: 2px;
+        display: inline-block;
+        animation: jumpInfinite 1.5s infinite;
     }
 
 }
