@@ -66,4 +66,14 @@
         animation: jumpInfinite 1.5s infinite;
     }
 
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* Una colonna */
+    }
+
+    .grid-item img {
+        height: auto;
+        width: 100%;
+    }
+
 }

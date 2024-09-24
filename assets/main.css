@@ -1,23 +1,59 @@
-body {
-    font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
-    background-color: whitesmoke;
+:root {
+    --background-color: whitesmoke;
+    --text-color: black;
+    --label-background: #f0f0f0;
 }
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-label {
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--label-background);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.theme-toggle:checked~body {
+    --background-color: black;
+    --text-color: whitesmoke;
+    --label-background: #444;
+}
+
+.theme-toggle {
+    display: none;
+}
+
 
 /* HEADER SECTION */
 
-nav {
-    border-radius: 10px;
+nav a {
+    text-decoration: none;
 }
 
 h1 {
     color: #000000;
 }
 
+h1:hover {
+    transform: scale(1.1);
+    /* Ingrossa il titolo al passaggio del mouse */
+    color: #FF0000;
+    /* Cambia colore al passaggio del mouse */
+}
+
 .button {
     color: #000000;
     background-color: #ffffff;
     padding: 10px 20px;
-    border-radius: 10px;
 }
 
 
@@ -39,7 +75,9 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     border-radius: 10px;
+
 }
 
 .overlay {

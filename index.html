@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +13,23 @@
         rel="stylesheet">
 </head>
 
+
 <body>
     <header>
         <nav>
             <div class="nav">
-                <h1>Patentish</h1>
+                <a href="./index.html">
+                    <h1>Patentish</h1>
+                </a>
                 <div class="nav-container">
-                    <button class="button" id="menu-button">Menu</button>
-                    <button class="button" id="login-button">Login <a href="./file.html"></a></button>
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">Study Mode</label>
+                    <a href="">
+                        <button class="button" id="menu-button">Menu</button>
+                    </a>
+                    <a href="./file.html">
+                        <button class="button" id="login-button">Login</button>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -43,51 +49,14 @@
         </section>
     </header>
 
-
     <main>
-        <form class="form-container" style="margin-top: 0px;">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
-
-                <label for="lname">Last Name:</label>
-                <input type="text" name="lname" id="lname" required>
-            </div>
-
-            <div>
-                <label for="npeople">People numbers:</label>
-                <input type="number" name="npeople" id="npeople" min="2" max="30" value="2" required>
-
-                <label for="phonen">Phone number:</label>
-                <input type="tel" name="phonen" id="phonen" required>
-            </div>
-
-            <div>
-                <label for="date">Date:</label>
-                <input type="date" id="date" required>
-
-                <label for="time">Hour:</label>
-                <input type="time" id="time" required>
-            </div>
-
-            <div>
-                <label for="dogs">Check this box if you have dogs:</label>
-                <input type="checkbox" id="dogs" name="dogs">
-            </div>
-
-            <fieldset>
-                <legend>Check the boxes if you have kids:</legend>
-                <label><input type="checkbox" name="kids" value="1"> Kid 1</label>
-                <label><input type="checkbox" name="kids" value="2"> Kid 2</label>
-                <label><input type="checkbox" name="kids" value="3"> Kid 3</label>
-                <label><input type="checkbox" name="kids" value="4"> Kid 4</label>
-                <label><input type="checkbox" name="kids" value="5"> Kid 5</label>
-            </fieldset>
-
-            <div id="botton">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
+        <h3>Our services:</h3>
+        <section class="grid-container">
+            <div class="grid-item"><img src="./foto-pictures/bas-peperzak-tyhpK_QelPo-unsplash-2.jpg"
+                    alt="">Videolessons</div>
+            <div class="grid-item"><img src="./foto-pictures/why-kei-8e2gal_GIE8-unsplash.jpg" alt=""></div>
+            <div class="grid-item"><img src="./foto-pictures/thai-an-FDCuK-B_f3A-unsplash.jpg" alt=""></div>
+        </section>
     </main>
 
     <footer>
