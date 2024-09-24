@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patentish</title>
-    <link rel="stylesheet" href="./assets/desktop.css" media="screen and (min-width: 1024px)">
-    <link rel="stylesheet" href="./assets/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
-    <link rel="stylesheet" href="./assets/mobile.css" media="screen and (max-width: 767px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,18 +18,24 @@
 
         h1 {
             color: #000000;
+            font-size: 3em;
+            margin: 4% 4%;
         }
 
         /* FORM SECTION */
+        .nav {
+            margin-bottom: 10px;
+            /* Spazio ridotto tra titolo e form */
+        }
 
         main {
             font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
-            background-color: whitesmoke;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0 0;
+            margin: 0;
+            padding-top: 20px;
+            /* Controlla la distanza tra il titolo e il form */
         }
 
         .form-container {
@@ -46,7 +49,8 @@
 
         h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 10px 0;
+            /* Riduce i margini del titolo del form */
         }
 
         form {
@@ -72,7 +76,7 @@
 
         button {
             padding: 12px;
-            background-color: #007bff;
+            background-color: #43913c;
             color: white;
             border: none;
             border-radius: 5px;
@@ -81,33 +85,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Combinator selector: seleziona input che segue un label */
-        label+input {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Attribute selector: seleziona il pulsante con l'attributo type="submit" */
-        button[type="submit"] {
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #43913c;
         }
 
         .forgot-password {
@@ -116,7 +94,7 @@
         }
 
         .forgot-password a {
-            color: #007bff;
+            color: #43913c;
             text-decoration: none;
         }
 

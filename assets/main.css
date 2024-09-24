@@ -43,13 +43,6 @@ h1 {
     color: #000000;
 }
 
-h1:hover {
-    transform: scale(1.1);
-    /* Ingrossa il titolo al passaggio del mouse */
-    color: #FF0000;
-    /* Cambia colore al passaggio del mouse */
-}
-
 .button {
     color: #000000;
     background-color: #ffffff;
