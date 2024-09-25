@@ -123,4 +123,27 @@
         display: none;
     }
 
+    #mobile-photo {
+        display: flex;
+        flex-direction: column;
+        /* Dispone gli elementi in colonna */
+        align-items: center;
+        /* Centro gli elementi orizzontalmente */
+        background-color: rgb(227, 224, 221);
+        margin: 5% 5%;
+        padding: 2% 2%;
+    }
+
+    #mobile-photo img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-top: 2%;
+        padding-bottom: 4%;
+    }
+
+    #mobile-1 {
+        text-align: center;
+    }
+
 }

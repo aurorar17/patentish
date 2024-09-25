@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patentish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* HEADER SECTION */
+        nav a {
+            text-decoration: none;
+        }
+
+        h1 {
+            color: #43913c;
+            font-size: 3em;
+            margin: 4% 4%;
+        }
+
+        /* FORM SECTION */
+        .nav {
+            margin-bottom: 10px;
+            /* Spazio ridotto tra titolo e form */
+        }
+
+        main {
+            font-family: "Ubuntu", Verdana, "Geneva", Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding-top: 20px;
+            /* Controlla la distanza tra il titolo e il form */
+        }
+
+        /* Variabili per la modalità chiara */
+        :root {
+            --bg-color: #fff;
+            --text-color: #000;
+            --transition-speed: 0.3s;
+        }
+
+        /* Variabili per la modalità scura */
+        :root.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+        }
+
+        /* Stili base */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Stili per il toggle (checkbox) */
+        .switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            width: 50px;
+            height: 24px;
+            background-color: var(--text-color);
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background-color: var(--bg-color);
+            top: 3px;
+            left: 3px;
+            transition: transform var(--transition-speed);
+        }
+
+        input:checked+.slider::before {
+            transform: translateX(26px);
+        }
+
+        /* Attiva la dark mode con il checkbox */
+        input:checked~.gallery {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Modalità scura di default secondo preferenze sistema operativo */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+            }
+        }
+    </style>
+
+
+<body>
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+    </label>
+
+    <div class="gallery">
+        <figure>
+            <img src="image1.jpg" alt="Immagine 1">
+            <figcaption>Immagine 1</figcaption>
+        </figure>
+        <figure>
+            <img src="image2.jpg" alt="Immagine 2">
+            <figcaption>Immagine 2</figcaption>
+        </figure>
+        <figure>
+            <img src="image3.jpg" alt="Immagine 3">
+            <figcaption>Immagine 3</figcaption>
+        </figure>
+        <figure>
+            <img src="image4.jpg" alt="Immagine 4">
+            <figcaption>Immagine 4</figcaption>
+        </figure>
+        <figure>
+            <img src="image5.jpg" alt="Immagine 5">
+            <figcaption>Immagine 5</figcaption>
+        </figure>
+        <figure>
+            <img src="image6.jpg" alt="Immagine 6">
+            <figcaption>Immagine 6</figcaption>
+        </figure>
+    </div>
+</body>
+
+</html>
