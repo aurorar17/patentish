@@ -1,4 +1,3 @@
-/* Media query per tablet (min larghezza: 768px) */
 @media screen and (min-width: 768px) {
 
     /* HEADER */
@@ -81,7 +80,11 @@
         text-align: left;
     }
 
-    .grid-container {
+    .grid-container1 {
+        display: none;
+    }
+
+    .grid-container2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;

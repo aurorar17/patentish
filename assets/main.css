@@ -70,7 +70,6 @@ h1 {
     background-size: cover;
     background-attachment: fixed;
     border-radius: 10px;
-
 }
 
 .overlay {
@@ -82,13 +81,12 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* ANIMATED ARROW */
+/* stupid ARROW */
 
 .down-arrow {
     position: absolute;
     top: 470px;
     bottom: 40px;
-    /* Posiziona la freccia 20px sopra il bordo inferiore della sezione */
     left: 50%;
     width: 0;
     height: 30px;
@@ -102,9 +100,7 @@ h1 {
     content: " ";
     position: absolute;
     top: 20px;
-    /* Posiziona la punta alla fine del corpo */
     left: -10px;
-    /* Centra la freccia */
     width: 16px;
     height: 16px;
     border-bottom: 4px solid;

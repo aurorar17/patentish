@@ -100,7 +100,7 @@
 
     .grid-item img {
         height: auto;
-        width: 100%;
+        max-width: 100%;
         border-radius: 4%;
     }
 
@@ -117,6 +117,10 @@
         background-color: black;
         color: rgb(255, 255, 255);
         padding: 10% 20%;
+    }
+
+    .grid-container2 {
+        display: none;
     }
 
 }
