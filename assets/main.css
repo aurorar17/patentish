@@ -64,7 +64,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 60vh;
-    background-image: url('/foto-pictures/1jan-baborak-4STq2B24S1k-unsplash.jpg');
+    background-image: url('./foto-pictures/1jan-baborak-4STq2B24S1k-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
